@@ -6,8 +6,8 @@ CURRENT_CONFIG_FILE="/etc/config/wireless"
 LOCAL="/root/nyu_network_conf/"
 SD="/mnt/sda1/"
 
-NYU_LOCAL=$LOCAL+"config_files/wireless.nyu"
-SANDBOX_LOCAL=$LOCAL+"config_files/wireless.itp"
+NYU_LOCAL=$LOCAL"config_files/wireless.nyu"
+SANDBOX_LOCAL=$LOCAL"config_files/wireless.itp"
 
 SANDBOX_SD=$SD+"config_files/wireless.itp"
 NYU_SD=$SD+"config_files/wireless.nyu"
@@ -19,23 +19,32 @@ NYU_PASSWORD="psswd"
 #check for correct wpad pkg
 #NOT TESTED
 WPAD_MINI=$(opkg list-installed | grep -c wpad-mini)
-WPAD=$(opkg list-installed | grep -c wpad_20131120-1)
+WPAD=$(opkg list-installed | grep -c wpad\ -\ 20131120-1) 
 
-if [ $WPAD_MINI eq 1 ]; then
+
+echo $WPAD_MINI
+echo $WPAD
+if [ $WPAD_MINI -eq 1 ]; then
   	echo "wpad-mini installed. Deleting and installing wpad..."
   	opkg remove wpad-mini
-  	PKG_PATH=$SD+wpad_20131120-1_ar71xx.ipk
+  	PKG_PATH=$SDwpad_20131120-1_ar71xx.ipk
   	opkg install $PKG_PATH
 
-elif [ $WPAD eq 1 ]; then 
-  	echo "Already installed"
+elif [ $WPAD -eq 1 ]; then 
+  	echo "wpad already installed"
 fi
 
 #check for directory
 #NOT TESTED
 if [ ! -d "$LOCAL" ]; then
+  	mkdir $LOCAL
+
   	if [ -d "$SD" ]; then
-  		echo $LOCAL+" not found."
+  		echo $LOCAL" not found."
+  		#getting rid of hidden mac folders from sd before copying files over
+  		rm -rf $SD".Spotlight-V100/"
+  		rm -rf $SD".Trashes/"
+  		rm -rf $SD".fseventsd/"
   		echo "Copying files from microSD"		
   		cp -R * $SD $LOCAL
 
@@ -43,7 +52,7 @@ if [ ! -d "$LOCAL" ]; then
   		echo $SD+" not found."
   		return 0
 	fi
-	echo $LOCAL+" found."
+	echo $LOCAL " found."
 fi
 
 

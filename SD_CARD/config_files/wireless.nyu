@@ -17,7 +17,7 @@ config wifi-iface
         option mode 'sta'
         option encryption 'mixed-wpa+aes'
         option eap_type 'peap'
-        option auth 'auth=MSCHAPV2
+        option auth 'auth=MSCHAPV2'
         option ssid 'nyu'
         option identity 'usr'
         option password 'psswrd'

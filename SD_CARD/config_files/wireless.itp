@@ -15,7 +15,7 @@ config wifi-iface
        option device 'radio0'
        option network 'lan'
        option mode 'sta'
-       option ssid 'itpsandbox'
        option encryption 'psk'
        option device 'radio0'
+       option ssid 'itpsandbox'
        option key 'NYU+s0a!+P?'
