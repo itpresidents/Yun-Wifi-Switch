@@ -1,7 +1,5 @@
-#Setting up the Yun to work on nyu Wi-Fi and itpsandbox	
-
-
-##What is this for?
+#What is this for?
+Setting up the Yun to work on nyu Wi-Fi and itpsandbox.	
 The instructions and the code in this repo are designed to make it easy to switch between NYUs Enterprise network and ITPs sandbox which is a WPA2 network. They are a programmatic version of Karl Wards  [Connected Devices notes](https://docs.google.com/a/nyu.edu/document/d/1sjEuz2kvg2WL44x1hwZIBAjGs43VIdOoVGXu-KWVBUE/edit#heading=h.1aj49wws2mc)
 
 
