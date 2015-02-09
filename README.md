@@ -3,7 +3,7 @@
 Setting up the Yun to work on nyu Wi-Fi and itpsandbox.	
 The instructions and the code in this repo are designed to make it easy to switch between NYUs Enterprise network and ITPs sandbox which is a WPA2 network. They are a programmatic version of Karl Wards  [Connected Devices notes](https://docs.google.com/a/nyu.edu/document/d/1sjEuz2kvg2WL44x1hwZIBAjGs43VIdOoVGXu-KWVBUE/edit#heading=h.1aj49wws2mc)
 
-
+If you just want an easier way to switch your Wi-Fi network I suggest you look at Sam Brenners excellent [Yun-easy-wifi-switch repo](https://github.com/sambrenner/yun-easy-wifi-switch).
 ##Prequisites
 
 The first time you setup your Yun go through the normal instructions to do a system upgrade of the Yun. This can be done by following the instructions at [this link](http://arduino.cc/en/Tutorial/YunSysupgrade).
