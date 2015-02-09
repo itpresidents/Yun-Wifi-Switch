@@ -46,7 +46,7 @@ Once you have added the `nyucreds.h` you can set the mode by uncommenting one of
 
 ```
 String mode = "itpsanbox";    //use this for sandbox
-//String mode = "nyu";            //use this for nyu
+String mode = "nyu";            //use this for nyu
 ```
 
 Compile and run the sketch and you should see the following outpt:
