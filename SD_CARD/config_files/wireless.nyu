@@ -1,0 +1,23 @@
+config wifi-device 'radio0'
+        option type 'mac80211'
+        option hwmode '11ng'
+        option path 'platform/ar933x_wmac'
+        option htmode 'HT20'
+        list ht_capab 'SHORT-GI-20'
+        list ht_capab 'SHORT-GI-40'
+        list ht_capab 'RX-STBC1'
+        list ht_capab 'DSSS_CCK-40'
+        option disabled '0'
+        option channel 'auto'
+        option country 'US'
+
+config wifi-iface
+        option device 'radio0'
+        option network 'lan'
+        option mode 'sta'
+        option encryption 'mixed-wpa+aes'
+        option eap_type 'peap'
+        option auth 'auth=MSCHAPV2
+        option ssid 'nyu'
+        option identity 'usr'
+        option password 'psswrd'
